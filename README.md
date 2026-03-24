@@ -6,6 +6,7 @@ An automated Node.js application that runs daily and:
 * generates a concise summary giving you a daily dose of tech news from around the globe using AI.
 
 🚀 Features
+
 📰 Fetch latest AI news from RSS feeds (e.g., Google News, News channels, youtube)
 🧹 Deduplicate similar articles
 📊 Rank articles by recency or relevance
