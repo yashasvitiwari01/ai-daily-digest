@@ -1,0 +1,32 @@
+name: AI Daily Digest
+
+on:
+  schedule:
+    - cron: "30 12 * * *"   # Runs daily at 12:30 PM UTC
+  workflow_dispatch:       # Allows manual trigger
+
+jobs:
+  run-bot:
+    # GitHub gives you a temporary machine
+    # Your code runs on a fresh Linux server every time
+    # You can specify the OS you want to run on
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run bot
+        run: node src/index.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          # TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
