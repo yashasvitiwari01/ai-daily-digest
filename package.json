@@ -1,0 +1,23 @@
+{
+  "name": "ai-daily-digest",
+  "type":"module",
+  "version": "1.0.0",
+  "description": "An automated Node.js application that runs daily and: * fetches news from RSS feeds * filters out only AI and tech news from the plathora of data * removes duplicate news and ranks articles * generates a concise summary giving you a daily dose of tech news from around the globe using AI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.13.6",
+    "dotenv": "^17.3.1",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "nodemon": "^3.1.14"
+  }
+}
