@@ -1,6 +1,6 @@
 {
   "name": "ai-daily-digest",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
   "description": "An automated Node.js application that runs daily and: * fetches news from RSS feeds * filters out only AI and tech news from the plathora of data * removes duplicate news and ranks articles * generates a concise summary giving you a daily dose of tech news from around the globe using AI.",
   "main": "index.js",
@@ -14,6 +14,8 @@
     "@google/generative-ai": "^0.24.1",
     "axios": "^1.13.6",
     "dotenv": "^17.3.1",
+    "node-telegram-bot-api": "^0.67.0",
+    "resend": "^6.9.4",
     "rss-parser": "^3.13.0"
   },
   "devDependencies": {
