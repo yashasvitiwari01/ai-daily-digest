@@ -1,7 +1,5 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 /**
  * Sends an email with the AI digest
  * @param {Object} options - Email options
@@ -9,6 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
  * @param {string} options.html - Email HTML content
  */
 export async function sendEmail({ subject, html }) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     await resend.emails.send({
       from: process.env.EMAIL_FROM,
